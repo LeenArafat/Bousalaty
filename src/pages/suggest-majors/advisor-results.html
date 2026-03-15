@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستشارك الأكاديمي الذكي - اقتراح التخصصات</title>
+    <link rel="stylesheet" href="advisor-results.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo">مستشارك الأكاديمي الذكي</div>
+                <div class="nav-right">
+                    <a href="#" class="logout">تسجيل خروج</a>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>أفضل تخصصات تناسب شخصيتك</h1>
+                <p>تحليل ميولك ومهاراتك + اقتراح التخصص لك</p>
+            </div>
+        </section>
+
+        <!-- AI Analysis Card -->
+        <section class="ai-card">
+            <svg class="ai-illus" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="bulbGlow" cx="50%" cy="30%" r="50%">
+                        <stop offset="0%" stop-color="#ffd700" stop-opacity="0.8"/>
+                        <stop offset="70%" stop-color="#ffed4a" stop-opacity="0.4"/>
+                        <stop offset="100%" stop-color="#fff176" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+                <path d="M100 20 Q120 10 140 30 Q150 50 140 80 Q130 110 100 140 Q70 110 60 80 Q50 50 60 30 Q80 10 100 20 Z" fill="#ffed4a" stroke="#f9c107" stroke-width="3"/>
+                <ellipse cx="100" cy="30" rx="20" ry="25" fill="#fff176"/>
+                <circle cx="100" cy="25" r="12" fill="url(%23bulbGlow)"/>
+                <!-- Idea rays -->
+                <path d="M100 10 L105 0 L110 10" stroke="#ffd700" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <!-- Hand -->
+                <path d="M30 150 Q50 130 70 150 Q80 160 75 170 Q70 175 60 170 Q50 165 40 160 Q35 155 30 150 Z" fill="#ffebee" stroke="#f8bbd9" stroke-width="2"/>
+            </svg>
+            <div class="ai-content">
+                <h2>العمل باقتراحات الذكي</h2>
+                <p>حلل ميولك والميل التنظيمي المفضل ويفضلك الرئيسية أنتج.</p>
+                <ul class="bullets">
+                    <li><span class="check-icon">✓</span>تحليل دقيق لمهاراتك</li>
+                    <li><span class="check-icon">✓</span>اقتراحات مخصصة لشخصيتك</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section Title -->
+        <h2 class="section-title">ما نوع تخصصات شخصيتك</h2>
+
+        <!-- Major Cards -->
+        <div class="majors-grid">
+            <!-- Computer Science -->
+            <div class="major-card cs">
+                <span class="badge">87%</span>
+                <svg class="major-icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="15" width="60" height="40" rx="5" fill="#bbdefb" stroke="#2196f3" stroke-width="2"/>
+                    <rect x="20" y="25" width="10" height="15" rx="2" fill="#e3f2fd"/>
+                    <rect x="35" y="25" width="10" height="15" rx="2" fill="#e3f2fd"/>
+                    <rect x="50" y="25" width="10" height="15" rx="2" fill="#e3f2fd"/>
+                    <path d="M30 60 Q35 65 40 60 Q45 55 50 60 L55 55" stroke="#2196f3" stroke-width="3" fill="none" stroke-linecap="round"/>
+                </svg>
+                <h3>علوم الحاسوب</h3>
+                <p>مجال مناسب لمهاراتك التقنية وتحليل المشاكل. يشمل على تطوير البرمجيات.</p>
+                <button class="btn cs-detail-btn">عرض التفاصيل</button>
+            </div>
+
+            <!-- Business Administration -->
+            <div class="major-card business">
+                <span class="badge">82%</span>
+                <svg class="major-icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 20 L65 20 L65 60 L40 60 L40 50 L15 50 Z" fill="#c8e6c9" stroke="#4caf50" stroke-width="2"/>
+                    <rect x="20" y="25" width="40" height="20" rx="3" fill="#e8f5e8"/>
+                    <circle cx="35" cy="38" r="6" fill="#4caf50"/>
+                    <path d="M25 45 L30 42 L35 48 L40 43 L45 49 L50 44 L55 47" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" fill="none"/>
+                    <circle cx="60" cy="35" r="8" fill="#81c784"/>
+                </svg>
+                <h3>إدارة أعمال</h3>
+                <p>تخصص يجمع مهاراتك بالاتصال والتخطيط. ستثمر في قيادة فريق الأعمال.</p>
+                <button class="btn business business-detail-btn">عرض التفاصيل</button>
+            </div>
+
+            <!-- Nursing -->
+            <div class="major-card nursing">
+                <span class="badge">78%</span>
+                <svg class="major-icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 25 Q25 15 35 20 Q45 15 55 25 L50 70 L30 70 Z" fill="#ffe0b2" stroke="#ff9800" stroke-width="2"/>
+                    <ellipse cx="42" cy="28" rx="8" ry="5" fill="#fff3e0"/>
+                    <circle cx="38" cy="25" r="3" fill="#ff9800"/>
+                    <circle cx="38" cy="55" r="12" fill="#ffcdd2"/>
+                    <path d="M38 45 Q35 42 32 45 Q30 48 32 52 Q35 50 38 52 Q40 50 42 52 Q45 48 42 45 Z" fill="#f8bbd9"/>
+                </svg>
+                <h3>تمريض</h3>
+                <p>إذا كنت تبحث عن تخصص إنساني مجاله الرعاية الصحية الحقيقية.</p>
+                <button class="btn nursing nursing-detail-btn">عرض التفاصيل</button>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div id="modal-backdrop" class="modal-backdrop">
+            <!-- CS Modal -->
+            <div class="modal-content modal-cs">
+                <div class="modal-header">
+                    <h2 class="modal-title">علوم الحاسوب</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-section">
+                        <h4>نظرة عامة</h4>
+                        <p>تخصص علوم الحاسوب يركز على دراسة البرمجة، الخوارزميات، هياكل البيانات، والذكاء الاصطناعي. هو أساس لتكنولوجيا المعلومات الحديثة.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>المهارات المطلوبة</h4>
+                        <ul>
+                            <li>التفكير التحليلي وحل المشاكل</li>
+                            <li>مهارات البرمجة (Python, Java, C++)</li>
+                            <li>فهم الرياضيات والمنطق</li>
+                            <li>الإبداع في تصميم الحلول</li>
+                            <li>العمل الجماعي والتواصل</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h4>الفرص الوظيفية</h4>
+                        <ul>
+                            <li>مهندس برمجيات</li>
+                            <li>مطور تطبيقات ويب/موبايل</li>
+                            <li>خبير أمن معلومات</li>
+                            <li>عالم بيانات</li>
+                            <li>مهندس ذكاء اصطناعي</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn">ابدأ الدراسة الآن</button>
+                </div>
+            </div>
+
+            <!-- Business Modal -->
+            <div class="modal-content modal-business" style="display: none;">
+                <div class="modal-header">
+                    <h2 class="modal-title">إدارة أعمال</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-section">
+                        <h4>نظرة عامة</h4>
+                        <p>تخصص إدارة الأعمال يعلمك كيفية إدارة الشركات، التسويق، المالية، والموارد البشرية. مثالي للقادة المستقبليين.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>المهارات المطلوبة</h4>
+                        <ul>
+                            <li>مهارات التواصل والتفاوض</li>
+                            <li>التخطيط الاستراتيجي</li>
+                            <li>إدارة الوقت والفرق</li>
+                            <li>التحليل المالي</li>
+                            <li>القيادة والإلهام</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h4>الفرص الوظيفية</h4>
+                        <ul>
+                            <li>مدير تنفيذي CEO</li>
+                            <li>مدير تسويق</li>
+                            <li>محلل مالي</li>
+                            <li>مدير موارد بشرية</li>
+                            <li>مستشار إداري</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn business">ابدأ الدراسة الآن</button>
+                </div>
+            </div>
+
+            <!-- Nursing Modal -->
+            <div class="modal-content modal-nursing" style="display: none;">
+                <div class="modal-header">
+                    <h2 class="modal-title">تمريض</h2>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-section">
+                        <h4>نظرة عامة</h4>
+                        <p>تخصص التمريض يركز على رعاية المرضى، الطب الوقائي، والمساعدة في العمليات الطبية. مهنة إنسانية نبيلة.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h4>المهارات المطلوبة</h4>
+                        <ul>
+                            <li>الرحمة والصبر</li>
+                            <li>مهارات تواصل ممتازة</li>
+                            <li>القدرة على العمل تحت الضغط</li>
+                            <li>معرفة طبية أساسية</li>
+                            <li>اللياقة البدنية</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h4>الفرص الوظيفية</h4>
+                        <ul>
+                            <li>ممرض في المستشفيات</li>
+                            <li>ممرض في العناية المركزة</li>
+                            <li>ممرض في الطوارئ</li>
+                            <li>ممرض في الرعاية المنزلية</li>
+                            <li>مدير قسم تمريض</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn nursing">ابدأ الدراسة الآن</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <button class="nav-btn prev-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                السابق
+            </button>
+            <button class="nav-btn next-btn">
+                التالي
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 5L9 12L15 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <button class="chat-btn">
+        <svg class="chat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 16.1 22 15V4C22 2.9 21.1 2 20 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+    </button>
+
+    <script>
+        // Modal functionality
+        const backdrop = document.getElementById('modal-backdrop');
+        const csModal = backdrop.querySelector('.modal-cs');
+        const businessModal = backdrop.querySelector('.modal-business');
+        const nursingModal = backdrop.querySelector('.modal-nursing');
+        const closeBtns = backdrop.querySelectorAll('.modal-close');
+
+        // Open modals
+        document.querySelector('.cs-detail-btn').addEventListener('click', () => {
+            csModal.style.display = 'block';
+            backdrop.classList.add('active');
+        });
+
+        document.querySelector('.business-detail-btn').addEventListener('click', () => {
+            businessModal.style.display = 'block';
+            backdrop.classList.add('active');
+        });
+
+        document.querySelector('.nursing-detail-btn').addEventListener('click', () => {
+            nursingModal.style.display = 'block';
+            backdrop.classList.add('active');
+        });
+
+        // Close modals
+        closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+        backdrop.addEventListener('click', (e) => {
+            if (e.target === backdrop) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        function closeModal() {
+            backdrop.classList.remove('active');
+            [csModal, businessModal, nursingModal].forEach(modal => modal.style.display = 'none');
+        }
+
+        // Chat button
+        document.querySelector('.chat-btn').addEventListener('click', () => {
+            alert('فتح الدردشة مع المستشار!');
+        });
+    </script>
+</body>
+</html>
