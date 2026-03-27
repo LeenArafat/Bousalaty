@@ -1,9 +1,9 @@
 import './App.css';
+import Quiz from './pages/explore-interests/Quiz';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Quiz />
   );
 }
 
