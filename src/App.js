@@ -1,9 +1,16 @@
 import './App.css';
-import Quiz from './pages/explore-interests/Quiz';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import YazanHomePage from './pages/home-page/HomePage.jsx';
+import AuthPage from './pages/auth/AuthPage';
 
 function App() {
   return (
-    <Quiz />
+    <Router>
+      <Routes>
+        <Route path="/" element={<YazanHomePage />} />
+        <Route path="/login" element={<AuthPage />} />
+      </Routes>
+    </Router>
   );
 }
 
