@@ -1,35 +1,28 @@
-export function Dasboard() {
-    return <>
-        <button className="btn btn-info" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
-            ☰
-        </button>
+import { GPACalculator } from "./gpacalculator";
+import { Offcanvas } from "./offcanvas";
+import { SavedMajors } from "./savedmajors";
+import { StudyTip } from "./tips";
 
-        <div className="offcanvas offcanvas-start" id="sidebar" style={{ backgroundColor: "#f8f9fa" }}>
-            <div className="offcanvas-header">
-                <h5 className="offcanvas-title">لوحة الطالب</h5>
-                <button type="button" className="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
+export function Dashboard() {
+  const myMajors = [
+    { name: "علوم الحاسوب", description: "Computer Science" },
+    { name: "هندسة الحاسوب", description: "Computer Engineering" },
+    { name: "ذكاء الأعمال", description: "Business intelligence" },
+  ];
 
-            {/* Profile Section */}
-            <div className="text-center p-3">
-                <img
-                    src="https://brainium.com/wp-content/uploads/2021/11/sudoku-Mobile-hero-asset@2x.png"
-                    className="rounded-circle mb-2"
-                    alt="personal photo"
-                    style={{ width: "120px", height: "120px" }}
-                />
-                <p className="mb-0 fw-bold">سودوكو</p>
-                <p className="text-muted mb-3">soso@123.com</p>
-            </div>
-
-            {/* Navigation */}
-            <div className="offcanvas-body">
-                <ul className="list-group">
-                    <li className="list-group-item list-group-item-action">تخصصاتي المحفوظة</li>
-                    <li className="list-group-item list-group-item-action">حاسبة المعدل الجامعي</li>
-                    <li className="list-group-item list-group-item-action">نصائح الدراسة</li>
-                </ul>
-            </div>
+  return <>
+    <Offcanvas />
+    <div className="container">
+      <div className="row">
+        <div className=" col-6 mt-4">        
+          <SavedMajors majors={myMajors} />
+          <StudyTip />
         </div>
-    </>
+
+        <div className="col-6">
+        <GPACalculator />
+        </div>
+      </div>
+    </div>
+  </>
 }
