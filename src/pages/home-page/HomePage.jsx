@@ -1,131 +1,184 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "./Homebage.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import img1 from "./image/hero-bg.jpeg"
+const HomePage = () => {
+    const features = [
+        {
+            icon: 'fas fa-brain',
+            title: 'تحليل تخصص فوري',
+            desc: 'تحليل من الحاسوب وتحليل مهاراتك'
+        },
+        {
+            icon: 'fas fa-list-check',
+            title: 'اقتراح تخصصات مخصصة',
+            desc: 'نحن نخضع تحليلاتك'
+        },
+        {
+            icon: 'fas fa-chart-line',
+            title: 'محاكاة مستقبلية',
+            desc: 'مناسب أكثر لمهاراتك الحاسوبية'
+        }
+    ];
 
-const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
+    return (
+        <>
+        <section
+  className="hero-bg d-flex align-items-center"
+  style={{
+   backgroundImage: `url(${img1})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    minHeight: '100vh',
+    position: 'relative'
+  }}
+>
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+  
+  <div
+    style={{
+      position: 'absolute',
+      inset: 0,
+      
+      zIndex: 1
+    }}
+  ></div>
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  
+  <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+    <div className="row min-vh-100 align-items-center">
 
-  return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="navbar-container">
-        {/* Logo */}
-        <div className="navbar-logo">
-          <span className="logo-icon">🎓</span>
-          <span className="logo-text">مستشارك الأكاديمي الذكي</span>
-        </div>
-
-        {/* Links */}
-        <div className="navbar-links">
-          <a href="#" className="nav-link">تحميل دخول</a>
-
-          {/* 🔥 Login routing */}
-          <Link to="/login" className="nav-link">
-            تسجيل دخول
-          </Link>
-
-          <button className="btn-primary">ابدأ الاختبار</button>
-
-          <span className="hamburger">☰</span>
-        </div>
-      </div>
-    </nav>
-  );
-};
-
-const HeroSection = () => (
-  <section className="hero">
-    <div className="hero-container">
-      <div className="hero-text">
-        <h1 className="hero-title">
-          اكتشف تخصصك الذكي
-          <br />
-          <span className="highlight">مع مساعدك AI</span>
+      <div className="col-lg-6 text-start">
+        <h1
+          style={{
+            fontSize: '56px',
+            fontWeight: '800',
+            color: '#1f2937',
+            lineHeight: '1.3',
+            position: "relative",
+    right:" 612px",
+          }}
+        >
+          اكتشف تخصصك الذكي مع مساعدك AI
         </h1>
 
-        <p className="hero-subtitle">
+        <p
+          style={{
+            fontSize: '25px',
+            color: '#374151',
+            marginTop: '20px',
+            marginBottom: '30px',
+            maxWidth: '500px',
+            position : 'relative',
+            right:"750px"
+          }}
+        >
           تحليل ميولك ومهاراتك واقتراح أفضل تخصص لك
         </p>
 
-        <button className="btn-green">ابدأ التحليل الذكي</button>
+        <Link
+          to="/quiz"
+          style={{
+            background: 'linear-gradient(90deg, #10b981, #059669)',
+            color: '#fff',
+            padding: '14px 30px',
+            borderRadius: '50px',
+            fontWeight: '700',
+            textDecoration: 'none',
+             position : 'relative',
+            right:"512px"
+          }}
+        >
+          🚀 ابدأ التحليل الذكي
+        </Link>
       </div>
 
-      <div className="hero-illustration">
-        <div className="illustration-blob"></div>
-        <div className="robot-card">🤖</div>
-        <div className="student-card">🧑‍💻</div>
-        <div className="floating-card">💡</div>
-      </div>
     </div>
-  </section>
-);
+  </div>
+</section>
+            
+            <section className="feature-section">
+                <div className="container">
+                    <div className="text-center mb-5">
+                        <h2 className="display-5 fw-bold mb-4">كيف يعمل الموقع؟</h2>
+                    </div>
+                    <div className="row g-4">
+                        {features.map((f, i) => (
+                            <div key={i} className="col-lg-4 col-md-6">
+                                <div className="feature-card h-100 text-center">
+                                    <div className="feature-icon">
+                                        <i className={f.icon}></i>
+                                    </div>
+                                    <h4 className="fw-bold mb-3">{f.title}</h4>
+                                    <p>{f.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
-const HowItWorks = () => {
-  const cards = [
-    {
-      icon: "⚙️",
-      title: "تحليل تخصص فوري",
-      desc: "تحليل سريع لمهاراتك",
-    },
-    {
-      icon: "🔍",
-      title: "اقتراح تخصصات",
-      desc: "اقتراحات مناسبة لك",
-    },
-    {
-      icon: "🤖",
-      title: "ذكاء اصطناعي",
-      desc: "تحليل متقدم لشخصيتك",
-    },
-  ];
+            
+            <section className="comparison-section">
+                <div className="container">
+                    <div className="text-center mb-5">
+                        <h2 className="display-5 fw-bold mb-4">قارن بين التخصصات</h2>
+                        <p className="lead text-muted">اكتشف الفرق والتوافق مع مهاراتك</p>
+                    </div>
+                    <div className="row align-items-stretch">
+                        <div className="col-lg-5">
+                            <div className="comparison-card h-100 text-center p-4">
+                                <i className="fas fa-laptop-code fa-3x text-primary mb-4"></i>
+                                
+                                <h3 className="fw-bold mb-3">علوم الحاسوب</h3>
+                                <ul className="list-unstyled mb-4">
+                                    <li className="mb-2"><i className="fas fa-check text-success me-2"></i>برمجة وتطوير</li>
+                                    <li className="mb-2"><i className="fas fa-check text-success me-2"></i>قواعد بيانات</li>
+                                    <li className="mb-2"><i className="fas fa-check text-success me-2"></i>شبكات</li>
+                                </ul>
+                                <div className="bg-primary text-white rounded-pill px-4 py-2 mx-auto" style={{ maxWidth: '200px' }}>
+                                    توافق: 85%
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-2 d-flex align-items-center justify-content-center">
+                            <div className="vs-container">
+                                <div className="vs-badge">
+                                    VS
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-5">
+                            <div className="comparison-card h-100 text-center p-4">
+                              
+                                
+                                <i className="fas fa-robot fa-3x  text-success mb-4" style={{ content:"\f544"}}></i>
+                                <h3 className="fw-bold mb-3">الذكاء الاصطناعي</h3>
+                                <ul className="list-unstyled mb-4">
+                                    <li className="mb-2"><i className="fas fa-check text-success me-2"></i>تعلم آلي</li>
+                                    <li className="mb-2"><i className="fas fa-check text-success me-2"></i>رؤية حاسوبية</li>
+                                    <li className="mb-2"><i className="fas fa-check text-success me-2"></i>معالجة لغة</li>
+                                </ul>
+                                <div className="bg-success text-white rounded-pill px-4 py-2 mx-auto" style={{ maxWidth: '200px' }}>
+                                    توافق: 92%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  return (
-    <section className="how-it-works">
-      <h2 className="section-title">كيف يعمل الموقع؟</h2>
-
-      <div className="cards-grid">
-        {cards.map((card, i) => (
-          <div className="feature-card" key={i}>
-            <div className="card-icon">{card.icon}</div>
-            <h3>{card.title}</h3>
-            <p>{card.desc}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+            
+            <section className="cta-section text-center py-5">
+                <div className="container">
+                    <h2 className="display-4 fw-bold mb-4">جاهز لاكتشاف تخصصك؟</h2>
+                    <Link to="/quiz" className="btn-success-custom px-6">
+                        <i className="fas fa-magic me-2"></i>ابدأ الآن مجاناً
+                    </Link>
+                </div>
+            </section>
+        </>
+    );
 };
 
-const ComparisonBanner = () => (
-  <section className="comparison-banner">
-    <div className="comparison-inner">
-      <div>🎓 علوم الحاسوب</div>
-      <div className="vs-circle">VS</div>
-      <div>🤖 الذكاء الاصطناعي</div>
-    </div>
-  </section>
-);
-
-const ChatbotButton = () => (
-  <button className="chatbot-btn">💬</button>
-);
-
-const YazanHomePage = () => {
-  return (
-    <div className="app" dir="rtl">
-      <Navbar />
-      <HeroSection />
-      <HowItWorks />
-      <ComparisonBanner />
-      <ChatbotButton />
-    </div>
-  );
-};
-
-export default YazanHomePage;
+export default HomePage;

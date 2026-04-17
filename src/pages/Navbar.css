@@ -1,0 +1,52 @@
+.sm-navbar {
+  background: #1e3a8a;
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.25);
+  
+}
+
+.sm-navbar-left,
+.sm-navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.sm-navbar-logo {
+  width: 100px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.sm-logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.sm-nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s ease;
+  text-decoration: none;
+}
+
+.sm-nav-link:hover {
+  color: #fbbf24;
+}
+
+.sm-menu-icon {
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.sm-menu-icon:hover {
+  color: #fbbf24;
+}
