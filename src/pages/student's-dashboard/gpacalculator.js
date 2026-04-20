@@ -72,7 +72,7 @@ export function GPACalculator() {
       {error && <div className="alert alert-danger">{error}</div>}
 
       <div className="mb-3">
-        <button className="btn btn-primary me-2" onClick={addCourse}>
+        <button className="btn btn-primary m-2" onClick={addCourse}>
           إضافة مادة
         </button>
         <button className="btn btn-success" onClick={calculateGPA}>

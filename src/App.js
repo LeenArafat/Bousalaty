@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './pages/Navbar';
+import MajorDetails from './pages/explore-major/Major';
 import SuggestMajors from './pages/suggest-majors/SuggestMajors';
 import About from './pages/suggest-majors/About';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -20,8 +21,8 @@ function App() {
   return (
     <>
       <Navbar />
-
       <Routes>
+        <Route path="/details" element={<MajorDetails /> } />
         <Route path="/" element={<SuggestMajors />} />
         <Route path="/about" element={<About />} />
         <Route path="/quiz" element={<Quiz />} />

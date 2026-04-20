@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function SavedMajors({ majors }) {
   return (
     <div className="container mt-3">
@@ -14,7 +16,7 @@ export function SavedMajors({ majors }) {
                   <div className="card-body d-flex flex-column text-center">
                     <h5 className="card-title">{major.name}</h5>
                     <p className="card-text text-muted">{major.description}</p>
-                    <button className="btn  btn-primary mt-auto">عرض التفاصيل</button>
+                    <Link to={"/details"} className="btn  btn-primary mt-auto">عرض التفاصيل</Link>
                   </div>
                 </div>
               </div>
