@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom"
 export function Offcanvas() {
-     return <>
+    return <>
         <button className="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
             ☰
         </button>
@@ -22,12 +23,19 @@ export function Offcanvas() {
                 <p className="text-muted mb-3">soso@123.example</p>
             </div>
 
-            {/* Navigation */}
             <div className="offcanvas-body">
-                <ul className="list-group">
-                    <li className="list-group-item list-group-item-action">تخصصاتي المحفوظة</li>
-                    <li className="list-group-item list-group-item-action">حاسبة المعدل الجامعي</li>
-                    <li className="list-group-item list-group-item-action">نصائح الدراسة</li>
+                <ul className="list-group text-end">
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/dashboard" className="text-decoration-none d-block"> تخصصاتي المحفوظة </Link>
+                    </li>
+
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/dashboard" className="text-decoration-none d-block"> حاسبة المعدل الجامعي </Link>
+                    </li>
+
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/dashboard" className="text-decoration-none d-block"> نصائح الدراسة </Link>
+                    </li>
                 </ul>
             </div>
         </div>

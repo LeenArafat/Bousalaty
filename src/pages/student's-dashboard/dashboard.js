@@ -1,5 +1,4 @@
 import { GPACalculator } from "./gpacalculator";
-import { Offcanvas } from "./offcanvas";
 import { SavedMajors } from "./savedmajors";
 import { StudyTip } from "./tips";
 
@@ -11,7 +10,6 @@ export function Dashboard() {
   ];
 
   return <>
-    <Offcanvas />
     <div className="container">
       <div className="row">
         <div className=" col-6 mt-4">        

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 const questions = [
   {
     id: 1,
@@ -192,6 +192,7 @@ function Quiz() {
           </button>
 
           {isLast ? (
+            <Link to={"/"} >
             <button
               className="btn px-4 text-white"
               onClick={handleSubmit}
@@ -200,6 +201,7 @@ function Quiz() {
             >
               إرسال الإجابات
             </button>
+            </Link>
           ) : (
             <button
               className="btn px-4 text-white"
