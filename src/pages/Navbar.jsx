@@ -11,6 +11,8 @@ export default function Navbar() {
 
       <div className="sm-navbar-right d-flex align-items-center gap-4">
         <Link to="/" className="sm-nav-link">عرض النتائج</Link>
+        <Link to="/about" className="sm-nav-link">من نحن</Link>
+        <Link to="/login" className="sm-nav-link">تسجيل الدخول</Link>
         <Link to="/About" className="sm-nav-link">من نحن</Link>
         <span className="sm-nav-link" role="button">تسجيل خروج</span>
         <span className="sm-menu-icon" role="button">☰</span>
