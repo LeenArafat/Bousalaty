@@ -28,19 +28,19 @@ export function Offcanvas() {
 
                     <li className="list-group-item list-group-item-action">
                         <Link to="/dashboard" className="text-decoration-none d-block">
-                            تخصصاتي المحفوظة
+                            <div  data-bs-dismiss="offcanvas"> تخصصاتي المحفوظة</div>
                         </Link>
                     </li>
 
                     <li className="list-group-item list-group-item-action">
                         <Link to="/dashboard" className="text-decoration-none d-block">
-                            حاسبة المعدل الجامعي
+                               <div data-bs-dismiss="offcanvas"> حاسبة المعدل الجامعي</div>
                         </Link>
                     </li>
 
                     <li className="list-group-item list-group-item-action">
                         <Link to="/dashboard" className="text-decoration-none d-block">
-                            نصائح الدراسة
+                           <div  data-bs-dismiss="offcanvas"> نصائح الدراسة</div>
                         </Link>
                     </li>
 

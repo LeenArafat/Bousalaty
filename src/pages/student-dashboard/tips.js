@@ -1,3 +1,4 @@
+import './style.css'
 export function StudyTip() {
   const tips = [
     "قسّم دراستك على جلسات قصيرة مع فواصل.",

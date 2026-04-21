@@ -1,0 +1,13 @@
+.card-body-style  {
+    background-color: rgb(204, 225, 255);
+    border-radius: 20px;
+}
+
+.sub-card-style {
+    background-color: aliceblue;
+}
+
+.gpa-calc-style {
+    background-color: rgb(235, 245, 220);
+    border-radius: 20px;
+}

@@ -43,7 +43,7 @@ export function GPACalculator() {
   };
 
   return (
-    <div className="container mt-5 p-4 border rounded">
+    <div className="container mt-5 p-4 border gpa-calc-style">
       <h2 className="mb-4">حاسبة GPA</h2>
 
       {courses.map((course, index) => (
