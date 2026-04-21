@@ -119,7 +119,7 @@ function Quiz() {
   return (
     <div
       className="min-vh-100 d-flex align-items-center justify-content-center"
-      style={{ backgroundColor: '#f0f4ff', direction: 'rtl' }}
+      style={{ direction: 'rtl' }}
     >
       <div className="card shadow-lg p-4" style={{ maxWidth: '650px', width: '100%', borderRadius: '16px' }}>
         
@@ -192,7 +192,7 @@ function Quiz() {
           </button>
 
           {isLast ? (
-            <Link to={"/"} >
+            <Link to={"/suggestions"} >
             <button
               className="btn px-4 text-white"
               onClick={handleSubmit}

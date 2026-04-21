@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { Offcanvas } from "./student's-dashboard/offcanvas";
+import { Offcanvas } from "./student-dashboard/offcanvas";
 import img2 from "./suggest-majors/imges/img8.png";
 import { Link } from "react-router-dom";
 
@@ -11,9 +11,10 @@ export default function Navbar() {
       </div>
 
       <div className="sm-navbar-right d-flex align-items-center gap-4">
-        <Link to="/" className="sm-nav-link">عرض النتائج</Link>
-        <Link to="/About" className="sm-nav-link">من نحن</Link>
-        <span className="sm-nav-link" role="button">تسجيل خروج</span>
+        <Link to="/" className="sm-nav-link">الصفحة الرئيسية</Link>
+        <Link to="/quiz" className="sm-nav-link"> ابدأ الاختبار</Link>
+        <Link to="/about" className="sm-nav-link">من نحن</Link>
+        <Link to="/login" className="sm-nav-link">تسجيل الخروج</Link>
         <Offcanvas />
       </div>
     </nav>

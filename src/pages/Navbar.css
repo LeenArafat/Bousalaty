@@ -1,17 +1,11 @@
 .sm-navbar {
-  background: #1e3a8a;
+  background: #4d65a6;
   min-height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 16px rgba(30, 58, 138, 0.25);
   
-}
-
-.sm-navbar-left,
-.sm-navbar-right {
-  display: flex;
-  align-items: center;
 }
 
 .sm-navbar-logo {
