@@ -87,6 +87,28 @@ const questions = [
       { label: "E", text: "عمل جماعي ونقاشات وتفاعل" },
     ],
   },
+  {
+    id: 9,
+    text: "شو كان فرعك بالتوجيهي؟",
+    options: [
+      { label: "A", text: "علمي" },
+      { label: "B", text: "أدبي" },
+      { label: "C", text: "صناعي" },
+      { label: "D", text: "تجاري" },
+      { label: "E", text: "شرعي / فندقي / غيره" },
+    ],
+  },
+  {
+    id: 10,
+    text: "معدلك ضمن أي range؟",
+    options: [
+      { label: "A", text: "أقل من 60" },
+      { label: "B", text: "من 60 إلى 69" },
+      { label: "C", text: "من 70 إلى 79" },
+      { label: "D", text: "من 80 إلى 89" },
+      { label: "E", text: "من 90 إلى 100" },
+    ],
+  },
 ];
 
 function Quiz() {
