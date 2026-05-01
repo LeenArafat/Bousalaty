@@ -4,14 +4,14 @@ import './Major.css';
 
 const MajorDetails = () => {
   return (
-    <Container className='mt-5 mb-5'>
+    <Container>
 
       <div className="card w-100 mb-3 mt-3">
         <div className="card-body">
           <div className="HC mb-3">
             <span
-              className="badge text-bg-success"
-              style={{ fontSize: '20px', fontWeight: 10 }}
+              className="badge text-bg-primary"
+              style={{ fontSize: '20px', fontWeight: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
             >
               85.5% - 98.5%
             </span>
@@ -30,14 +30,14 @@ const MajorDetails = () => {
         </div>
       </div>
 
-      <div className="row mt-3">
+      <div className="row g-3">
 
-        <div className="col-sm-6 mb-3 mb-sm-0 ggrade">
-          <div className="card">
+        <div className="col-sm-6">
+          <div className="card h-100">
             <div className="card-body C5">
               <h5 className="card-title pb-3">معدل القبول 🎓</h5>
               <p className="card-text grade pt-2 pb-5">
-                <span className="badge rounded-pill text-bg-success">
+                <span className="badge rounded-pill text-black">
                   85.5% - 98.5%
                 </span>
               </p>
@@ -45,27 +45,22 @@ const MajorDetails = () => {
           </div>
         </div>
 
-        <div className="col-sm-6 pb-3 ">
-          <div className="card">
+        <div className="col-sm-6">
+          <div className="card h-100">
             <div className="card-body C4">
-              <h5 className="card-title">فرص العمل 💼</h5>
+              <h5 className="card-title">عدد وسعر ساعات التخصص ⏳</h5>
               <p className="card-text">
                 <ul>
-                  <li>مطور برمجيات</li>
-                  <li>محلل بيانات</li>
+                  <li>عدد الساعات: 132 ساعة</li>
+                  <li>سعر الساعة: 45 دينار</li>
                 </ul>
               </p>
-              <button className="btn btn-primary">عرض تفاصيل</button>
             </div>
           </div>
         </div>
 
-      </div>
-
-      <div className="row">
-
-        <div className="col-sm-6 mb-3 mb-sm-0">
-          <div className="card">
+        <div className="col-sm-6">
+          <div className="card h-100">
             <div className="card-body C2">
               <h5 className="card-title">المواد الاساسية 📚</h5>
               <p className="card-text">
@@ -74,22 +69,23 @@ const MajorDetails = () => {
                   <li>هندسة البرمجيات</li>
                 </ul>
               </p>
-              <button className="btn btn-primary">عرض تفاصيل</button>
+              <div className="mt-3">
+                <button className="btn btn-primary">عرض تفاصيل</button>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="col-sm-6">
-          <div className="card">
+          <div className="card h-100">
             <div className="card-body C3">
-              <h5 className="card-title">المهارات المطلوبة 🔍</h5>
-              <p className="card-text">
-                <ul>
-                  <li>برمجة التطبيقات</li>
-                  <li>تحليل البيانات</li>
-                </ul>
+              <h5 className="card-title">تواصل مع خبير 🗣️</h5>
+              <p className="card-text ">
+                تواصل مع خبرائنا للحصول على استشارة والإجابة على استفساراتك.
               </p>
-              <button className="btn btn-primary">عرض تفاصيل</button>
+              <div className="mt-3">
+                <button className="btn btn-primary">تواصل الآن</button>
+              </div>
             </div>
           </div>
         </div>
