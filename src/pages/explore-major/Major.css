@@ -9,8 +9,9 @@
   border-radius: 20px;
   height: 300px;
   background: url(./assets/car1.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .HC {
@@ -28,31 +29,36 @@
 
 .C2 {
   background: url(./assets/car2.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 20px;
 }
 
 .C3 {
-  background: url(./assets/car3.jpg);
-  background-size: cover;
+  background: url(./assets/car9.jpg);
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 20px;
 }
 
 .C4 {
-  background: url(./assets/car4.jpg);
-  background-size: cover;
+  background: url(./assets/car8.jpg);
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 20px;
 }
 
 .C5 {
-  background: url(./assets/car5.jpg);
-  background-size: cover;
+  background: url(./assets/car7.jpg);
+  background-size: 100% 100%;
   background-position: center;
+  background-repeat: no-repeat;
   border-radius: 20px;
 }
+
 
 .card {
   border-radius: 20px;
@@ -77,6 +83,12 @@
 
   .card.w-100.mb-3.mt-3 {
     height: auto;
+    padding: 20px;
+  }
+
+  .card.w-100.mb-3.mt-3 .card-body {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
     padding: 20px;
   }
 
@@ -111,7 +123,7 @@
   }
 
   .btn {
-    width: 100%;
+    width: auto;
   }
 
   .ggrade {
