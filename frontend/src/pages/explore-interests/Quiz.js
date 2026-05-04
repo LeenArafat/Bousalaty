@@ -95,7 +95,7 @@ const questions = [
       { label: "B", text: "أدبي" },
       { label: "C", text: "صناعي" },
       { label: "D", text: "تجاري" },
-      { label: "E", text: "شرعي / فندقي / غيره" },
+      { label: "E", text: "شرعي" },
     ],
   },
   {
