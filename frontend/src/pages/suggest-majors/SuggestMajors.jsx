@@ -8,14 +8,14 @@ import img1 from "./imges/img2.png";
 const majors = [
   {
     id: 1,
-    title: "علوم الحاسبوب",
+    title: "علوم الحاسوب",
     match: 87,
     emoji: "🖥️",
     about: "يُعنى هذا التخصص بتصميم وتطوير البرمجيات وتحليل البيانات وبناء الأنظمة الذكية والشبكات.",
     skills: ["التفكير المنطقي", "حل المشكلات", "البرمجة", "الرياضيات", "الإبداع التقني"],
     jobs: ["مطور برمجيات", "محلل بيانات", "مهندس ذكاء اصطناعي", "أمن المعلومات", "مدير أنظمة"],
     duration: "4 سنوات",
-    salary: "8,000 - 18,000 ريال شهرياً",
+    salary: "3,000 - 8,000 شيكل شهرياً",
     desc: "مجال مناسب لمن يحب التقنية وتحليل المشاكل وتطوير البرمجيات والأنظمة.",
   },
   {
@@ -27,7 +27,7 @@ const majors = [
     skills: ["القيادة", "التواصل", "التحليل المالي", "التفاوض", "إدارة الوقت"],
     jobs: ["مدير تنفيذي", "محلل أعمال", "مستشار إداري", "رائد أعمال", "مدير مشاريع"],
     duration: "4 سنوات",
-    salary: "7,000 - 15,000 ريال شهرياً",
+    salary: "2,000 - 6,000 شيكل شهرياً",
     desc: "تخصص يجمع بين التخطيط والتنفيذ لمن يحب قيادة الفرق وبناء الأعمال.",
   },
   {
@@ -39,32 +39,46 @@ const majors = [
     skills: ["التعاطف", "الدقة", "العمل تحت الضغط", "التواصل", "المعرفة الطبية"],
     jobs: ["ممرض مستشفى", "ممرض طوارئ", "ممرض منزلي", "مشرف تمريض", "معلم صحي"],
     duration: "4 سنوات",
-    salary: "6,000 - 12,000 ريال شهرياً",
+    salary: "3,000 - 5,000 شيكل شهرياً",
     desc: "إذا كنت تهتم بمساعدة الآخرين وتحب مجال الرعاية الصحية فهذا هو تخصصك.",
   },
   {
     id: 4,
-    title: "تمريض",
-    match: 78,
-    emoji: "🩺",
-    about: "يجمع بين العلوم الطبية والرعاية الإنسانية لتقديم الدعم الصحي للمرضى في مختلف البيئات الطبية.",
-    skills: ["التعاطف", "الدقة", "العمل تحت الضغط", "التواصل", "المعرفة الطبية"],
-    jobs: ["ممرض مستشفى", "ممرض طوارئ", "ممرض منزلي", "مشرف تمريض", "معلم صحي"],
-    duration: "4 سنوات",
-    salary: "6,000 - 12,000 ريال شهرياً",
-    desc: "إذا كنت تهتم بمساعدة الآخرين وتحب مجال الرعاية الصحية فهذا هو تخصصك.",
+    title: "هندسه الحاسوب",
+    match: 90,
+    emoji: "🖥️",
+  about: "يُعنى هذا التخصص بتصميم وتطوير البرمجيات وتحليل البيانات وبناء الأنظمة الذكية والشبكات.",
+    skills: ["التفكير المنطقي", "حل المشكلات", "البرمجة", "الرياضيات", "الإبداع التقني"],
+    jobs: ["مطور برمجيات", "محلل بيانات", "مهندس ذكاء اصطناعي", "أمن المعلومات", "مدير أنظمة"],
+    duration: "5 سنوات",
+    salary: "5,000 - 8,000 شيكل شهرياً",
+    desc: "مجال مناسب لمن يحب التقنية وتحليل المشاكل وتطوير البرمجيات والأنظمة.",
   },
 ];
 
 export default function SuggestMajors() {
   const [selectedMajor, setSelectedMajor] = useState(null);
 
+  function addToFavorite(item) {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    const exists = favorites.find((fav) => fav.id === item.id);
+
+    if (!exists) {
+      favorites.push(item);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      alert("تمت الإضافة إلى المفضلة");
+    } else {
+      alert("هذا التخصص موجود مسبقًا في المفضلة");
+    }
+  }
+
+
   return (
     <div dir="rtl" className="sm-wrapper">
 
      
 
-      {/* ===== HERO ===== */}
 
       <section className="sm-hero text-center py-5 px-4"  style={{
     backgroundImage: `url(${heroBg})`,
@@ -96,7 +110,7 @@ export default function SuggestMajors() {
         </div>
       </section>
 
-      {/* ===== CARDS SECTION ===== */}
+      
       <section className="container py-5" >
         <div className="text-center mb-5">
           <h2 className="sm-section-title mb-2">التخصصات التي تناسب شخصيتك : </h2>
@@ -108,10 +122,8 @@ export default function SuggestMajors() {
             <div className="col-md-3" key={major.id}>
               <div className="sm-card h-100 position-relative text-center">
 
-                {/* Match badge - أحمر */}
                 <span className="sm-badge">{major.match}%</span>
 
-                {/* Gold top line */}
                 <div className="sm-card-topline" />
 
                 <div className="d-flex flex-column align-items-center p-4 pt-5">
@@ -123,6 +135,12 @@ export default function SuggestMajors() {
                     onClick={() => setSelectedMajor(major)}
                   >
                     عرض التفاصيل
+                  </button>
+                  <button
+                    className="sm-card-btnfa w-50 mt-3"
+                    onClick={() => addToFavorite(majors)}
+                  >
+                    المفضلة
                   </button>
                 </div>
               </div>
@@ -149,12 +167,10 @@ export default function SuggestMajors() {
             <div className="sm-modal-topbar" />
 
             <div className="p-4">
-              {/* Close */}
               <button className="sm-modal-close position-absolute" onClick={() => setSelectedMajor(null)}>
                 ✕
               </button>
 
-              {/* Header */}
               <div className="d-flex align-items-center gap-3 mb-3">
                 <span className="sm-modal-emoji">{selectedMajor.emoji}</span>
                 <div>
@@ -163,16 +179,13 @@ export default function SuggestMajors() {
                 </div>
               </div>
 
-              {/* Gold divider */}
               <div className="sm-gold-divider mb-4" />
 
-              {/* About */}
               <div className="mb-3">
                 <h6 className="sm-modal-label mb-2">📋 عن التخصص</h6>
                 <p className="sm-modal-text">{selectedMajor.about}</p>
               </div>
 
-              {/* Skills */}
               <div className="mb-3">
                 <h6 className="sm-modal-label mb-2">✦ المهارات المطلوبة</h6>
                 <div className="d-flex flex-wrap gap-2">
@@ -182,7 +195,6 @@ export default function SuggestMajors() {
                 </div>
               </div>
 
-              {/* Jobs */}
               <div className="mb-3">
                 <h6 className="sm-modal-label mb-2">🎓 فرص العمل</h6>
                 <div className="d-flex flex-wrap gap-2">
@@ -192,7 +204,6 @@ export default function SuggestMajors() {
                 </div>
               </div>
 
-              {/* Info Row */}
               <div className="row g-3 mb-4">
                 <div className="col-6">
                   <div className="sm-info-box">
