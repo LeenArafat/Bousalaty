@@ -55,7 +55,7 @@ const MajorDetails = () => {
           </div>
 
           <h4 className="card-title">
-            المهارات المكتسبة
+            المهارات المطلوبة 🛠️
           </h4>
           <ul>
             {skills.map((skill, index) => (
