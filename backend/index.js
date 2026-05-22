@@ -14,9 +14,8 @@ const corsOptions = {
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 };
-
-app.use(cors(corsOptions));
-app.options(/.*/, cors(corsOptions));
+app.use(cors());
+app.options(/.*/, cors());
 
 app.use(express.json());
 const studentRoutes = require('./routes/studentRoutes');
@@ -42,7 +41,6 @@ app.use('/opportunities', opportunityRoutes);
 app.use('/options', optionRoutes);
 app.use('/questions', questionRoutes);
 app.use('/responses', responseRoutes);
-app.use('/submissions', submissionRoutes);
 app.use('/skills', skillRoutes);
 app.use('/submissions' , submissionRoutes)
 app.use('/chatbot', chatbotRoutes);
