@@ -25,7 +25,7 @@ export default function AdminPanel() {
 
   const fetchFaculties = async () => {
     try {
-      const res = await fetch("${process.env.REACT_APP_API_URL}/faculties");
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/faculties`);
       const data = await res.json();
       setFaculties(data);
     } catch (err) {
@@ -35,7 +35,7 @@ export default function AdminPanel() {
 
   const fetchMajors = async () => {
     try {
-      const res = await fetch("${process.env.REACT_APP_API_URL}/majors");
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/majors`);
       const data = await res.json();
       setMajors(data);
     } catch (err) {
@@ -45,7 +45,7 @@ export default function AdminPanel() {
 
   const fetchExperts = async () => {
     try {
-      const res = await fetch("${process.env.REACT_APP_API_URL}/experts");
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/experts`);
       const data = await res.json();
       setExperts(data);
     } catch (err) {
@@ -55,7 +55,7 @@ export default function AdminPanel() {
 
   const fetchQuestions = async () => {
     try {
-      const res = await fetch("${process.env.REACT_APP_API_URL}/questions");
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/questions`);
       const data = await res.json();
       setQuestions(data);
     } catch (err) {
@@ -64,7 +64,7 @@ export default function AdminPanel() {
   };
   const fetchOptions = async () => {
     try {
-      const res = await fetch("${process.env.REACT_APP_API_URL}/options");
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/options`);
       const data = await res.json();
 
       console.log("Options from backend:", data);
@@ -84,7 +84,7 @@ export default function AdminPanel() {
 
   const fetchSkills = async () => {
     try {
-      const res = await fetch("${process.env.REACT_APP_API_URL}/skills");
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/skills`);
       const data = await res.json();
 
       console.log("Skills from backend:", data);
@@ -101,7 +101,7 @@ export default function AdminPanel() {
 
   const fetchOpportunities = async () => {
     try {
-      const res = await fetch("${process.env.REACT_APP_API_URL}/opportunities");
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/opportunities`);
       const data = await res.json();
 
       console.log("Opportunities from backend:", data);
@@ -245,7 +245,7 @@ const addFaculty = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("${process.env.REACT_APP_API_URL}/faculties", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/faculties`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -330,7 +330,7 @@ const addMajor = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("${process.env.REACT_APP_API_URL}/majors", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/majors`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -431,7 +431,7 @@ const addExpert = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("${process.env.REACT_APP_API_URL}/experts", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/experts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -467,7 +467,7 @@ const addQuestion = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("${process.env.REACT_APP_API_URL}/questions", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/questions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -625,7 +625,7 @@ const addOption = async (e) => {
   }
 
   try {
-    const res = await fetch("${process.env.REACT_APP_API_URL}/options", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/options`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -722,7 +722,7 @@ const addSkill = async (e) => {
   }
 
   try {
-    const res = await fetch("${process.env.REACT_APP_API_URL}/skills", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/skills`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -832,7 +832,7 @@ const addOpportunity = async (e) => {
   }
 
   try {
-    const res = await fetch("${process.env.REACT_APP_API_URL}/opportunities", {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/opportunities`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

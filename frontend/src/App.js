@@ -22,7 +22,7 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("${process.env.REACT_APP_API_URL}/faculties/1") // this is only to cxheck thaat we are connected to the data base
+    fetch (`${process.env.REACT_APP_API_URL}/faculties/1`) // this is only to cxheck thaat we are connected to the data base
       .then((res) => res.json())
       .then((data) => {
         setItems(data);

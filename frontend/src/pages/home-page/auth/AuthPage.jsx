@@ -107,8 +107,8 @@ const AuthPage = ({ login }) => {
     setMessage('');
 
     const url = isLogin
-      ? "${process.env.REACT_APP_API_URL}/login"
-      : "${process.env.REACT_APP_API_URL}/register";
+      ? `${process.env.REACT_APP_API_URL}/login`
+      : `${process.env.REACT_APP_API_URL}/register`;
 
     const response = await fetch(url, {
       method: "POST",
