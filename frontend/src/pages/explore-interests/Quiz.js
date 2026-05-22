@@ -14,7 +14,7 @@ function Quiz() {
 
 
   useEffect(() => {
-    fetch("${process.env.REACT_APP_API_URL}/questions")
+    fetch(`${process.env.REACT_APP_API_URL}/questions`)
       .then((res) => res.json())
       .then((data) => {
         setQuestions(data);
@@ -67,7 +67,7 @@ function Quiz() {
 
     try {
       // add new submission
-      const submissionRes = await fetch("${process.env.REACT_APP_API_URL}/submissions", {
+      const submissionRes = await fetch(`${process.env.REACT_APP_API_URL}/submissions`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ studentID }),
@@ -89,7 +89,7 @@ function Quiz() {
       }));
 
       for (const response of responses) {
-        const responseRes = await fetch("${process.env.REACT_APP_API_URL}/responses", {
+        const responseRes = await fetch(`${process.env.REACT_APP_API_URL}/responses`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(response),
