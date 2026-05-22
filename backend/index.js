@@ -40,9 +40,14 @@ app.use('/submissions', submissionRoutes);
 app.use('/skills', skillRoutes);
 app.use('/submissions' , submissionRoutes)
 app.use('/chatbot', chatbotRoutes);
+const PORT=process.env.PORT||3001;
 
-app.listen(3001, () => {
-    console.log('Server running on http://localhost:3001');
+app.listen(PORT,()=>{
+
+console.log(
+`Server running on port ${PORT}`
+);
+
 });
 
 /*
