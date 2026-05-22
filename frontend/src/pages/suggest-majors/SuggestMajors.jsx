@@ -23,7 +23,7 @@ export default function SuggestMajors() {
         return;
       }
 
-      fetch(`http://localhost:3001/submissions/student/${studentID}/latest`)
+      fetch(`${process.env.REACT_APP_API_URL}/submissions/student/${studentID}/latest`)
         .then(res => res.json())
         .then(data => {
           if (data.aiResult) {
@@ -38,7 +38,7 @@ export default function SuggestMajors() {
   const handleSaveMajor = async (majorID) => {
     try {
       const res = await fetch(
-        `http://localhost:3001/students/${studentID}/add-saved-major`,
+        `${process.env.REACT_APP_API_URL}/students/${studentID}/add-saved-major`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

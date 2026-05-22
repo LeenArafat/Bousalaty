@@ -12,7 +12,7 @@ export function Dashboard() {
   const handleRemoveMajor = async (majorID) => {
     try {
       const response = await fetch(
-        `http://localhost:3001/students/${studentID}/remove-saved-major`,
+        `${process.env.REACT_APP_API_URL}/students/${studentID}/remove-saved-major`,
         {
           method: "DELETE",
 
@@ -50,7 +50,7 @@ export function Dashboard() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:3001/students/${studentID}/saved-majors`)
+    fetch(`${process.env.REACT_APP_API_URL}/students/${studentID}/saved-majors`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched saved majors:", data);

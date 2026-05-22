@@ -10,7 +10,7 @@ function MyAttempts() {
   useEffect(() => {
     if (!studentID) return;
 
-    fetch(`http://localhost:3001/submissions/student/${studentID}`)
+    fetch(`${process.env.REACT_APP_API_URL}/submissions/student/${studentID}`)
       .then((res) => res.json())
       .then((data) => {
         console.log("submissions:", data);

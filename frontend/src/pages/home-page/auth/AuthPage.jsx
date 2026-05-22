@@ -107,8 +107,8 @@ const AuthPage = ({ login }) => {
     setMessage('');
 
     const url = isLogin
-      ? "http://localhost:3001/login"
-      : "http://localhost:3001/register";
+      ? "${process.env.REACT_APP_API_URL}/login"
+      : "${process.env.REACT_APP_API_URL}/register";
 
     const response = await fetch(url, {
       method: "POST",

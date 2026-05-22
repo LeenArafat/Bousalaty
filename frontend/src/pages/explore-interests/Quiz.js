@@ -14,7 +14,7 @@ function Quiz() {
 
 
   useEffect(() => {
-    fetch("http://localhost:3001/questions")
+    fetch("${process.env.REACT_APP_API_URL}/questions")
       .then((res) => res.json())
       .then((data) => {
         setQuestions(data);
@@ -67,7 +67,7 @@ function Quiz() {
 
     try {
       // add new submission
-      const submissionRes = await fetch("http://localhost:3001/submissions", {
+      const submissionRes = await fetch("${process.env.REACT_APP_API_URL}/submissions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ studentID }),
@@ -89,7 +89,7 @@ function Quiz() {
       }));
 
       for (const response of responses) {
-        const responseRes = await fetch("http://localhost:3001/responses", {
+        const responseRes = await fetch("${process.env.REACT_APP_API_URL}/responses", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(response),
@@ -103,7 +103,7 @@ function Quiz() {
       }
 
       // AI API
-      const aiRes = await fetch(`http://localhost:3001/submissions/${submissionID}/analyze`, {
+      const aiRes = await fetch(`${process.env.REACT_APP_API_URL}/submissions/${submissionID}/analyze`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
       });
