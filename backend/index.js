@@ -5,12 +5,19 @@ const cors = require('cors');
 
 const app = express();
 
+const cors = require("cors");
+
 app.use(cors({
-    origin: 'http://localhost:3000',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+  origin: [
+    "http://localhost:3000",
+    "https://bousalaty-group-6-7n7k.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
 }));
 
+app.options("*", cors());
 app.use(express.json());
 
 const studentRoutes = require('./routes/studentRoutes');
