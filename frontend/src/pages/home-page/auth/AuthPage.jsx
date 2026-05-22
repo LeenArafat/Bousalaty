@@ -107,8 +107,8 @@ const AuthPage = ({ login }) => {
     setMessage('');
 
     const url = isLogin
-      ? "http://localhost:3001/login"
-      : "http://localhost:3001/register";
+      ? "${process.env.REACT_APP_API_URL}/login"
+      : "${process.env.REACT_APP_API_URL}/register";
 
     const response = await fetch(url, {
       method: "POST",
@@ -289,9 +289,7 @@ const AuthPage = ({ login }) => {
 
               <div className="text-center">
                 <a href="#" className="link-secondary text-decoration-none" onClick={toggleForm}>
-                  {isLogin
-                    ? "Don't have an account? Sign up"
-                    : 'Already have an account? Sign in'}
+                  {isLogin? "Don't have an account? Sign up" : 'Already have an account? Sign in'}
                 </a>
                 <br />
                 <a href="/adminLogin" className="link-secondary text-decoration-none" onClick={toggleForm}>Continue as Admin</a>

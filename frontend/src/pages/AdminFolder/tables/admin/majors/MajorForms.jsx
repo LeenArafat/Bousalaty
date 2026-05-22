@@ -57,7 +57,7 @@ export default function MajorForms({
 
   if (id) {
     try {
-      const res = await fetch(`http://localhost:3001/majors/${id}`);
+      const res = await fetch(`process.env.REACT_APP_API_URL`);
       const data = await res.json();
 
       if (data) {

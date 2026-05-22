@@ -16,14 +16,14 @@ const MajorDetails = () => {
   const studentID = savedUser?.studentID || savedUser?.id || savedUser?.userID;
 
   useEffect(() => {
-    fetch(`http://localhost:3001/majors/${majorID}`)
+    fetch(`${process.env.REACT_APP_API_URL}/majors/${majorID}`)
       .then((res) => res.json())
       .then((data) => {
         setMajor(data);
 
 
         if (data.facultyID) {
-          fetch(`http://localhost:3001/faculties/${data.facultyID}/experts`)
+          fetch(`${process.env.REACT_APP_API_URL}/faculties/${data.facultyID}/experts`)
             .then((res) => res.json())
             .then((expertData) => {
               setExperts(expertData);
@@ -34,7 +34,7 @@ const MajorDetails = () => {
         }
       });
 
-    fetch(`http://localhost:3001/majors/${majorID}/skills`)
+    fetch(`${process.env.REACT_APP_API_URL}/majors/${majorID}/skills`)
       .then((res) => res.json())
       .then((data) => {
         setSkills(data.skills || []);
@@ -43,7 +43,7 @@ const MajorDetails = () => {
         console.error('Error fetching skills:', error);
       });
 
-    fetch(`http://localhost:3001/majors/${majorID}/opportunities`)
+    fetch(`${process.env.REACT_APP_API_URL}/majors/${majorID}/opportunities`)
       .then((res) => res.json())
       .then((data) => {
         console.log('Fetched opportunities:', data.jobOpportuneties);

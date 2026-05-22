@@ -25,7 +25,7 @@ export default function AdminPanel() {
 
   const fetchFaculties = async () => {
     try {
-      const res = await fetch("http://localhost:3001/faculties");
+      const res = await fetch("${process.env.REACT_APP_API_URL}/faculties");
       const data = await res.json();
       setFaculties(data);
     } catch (err) {
@@ -35,7 +35,7 @@ export default function AdminPanel() {
 
   const fetchMajors = async () => {
     try {
-      const res = await fetch("http://localhost:3001/majors");
+      const res = await fetch("${process.env.REACT_APP_API_URL}/majors");
       const data = await res.json();
       setMajors(data);
     } catch (err) {
@@ -45,7 +45,7 @@ export default function AdminPanel() {
 
   const fetchExperts = async () => {
     try {
-      const res = await fetch("http://localhost:3001/experts");
+      const res = await fetch("${process.env.REACT_APP_API_URL}/experts");
       const data = await res.json();
       setExperts(data);
     } catch (err) {
@@ -55,7 +55,7 @@ export default function AdminPanel() {
 
   const fetchQuestions = async () => {
     try {
-      const res = await fetch("http://localhost:3001/questions");
+      const res = await fetch("${process.env.REACT_APP_API_URL}/questions");
       const data = await res.json();
       setQuestions(data);
     } catch (err) {
@@ -64,7 +64,7 @@ export default function AdminPanel() {
   };
   const fetchOptions = async () => {
     try {
-      const res = await fetch("http://localhost:3001/options");
+      const res = await fetch("${process.env.REACT_APP_API_URL}/options");
       const data = await res.json();
 
       console.log("Options from backend:", data);
@@ -84,7 +84,7 @@ export default function AdminPanel() {
 
   const fetchSkills = async () => {
     try {
-      const res = await fetch("http://localhost:3001/skills");
+      const res = await fetch("${process.env.REACT_APP_API_URL}/skills");
       const data = await res.json();
 
       console.log("Skills from backend:", data);
@@ -101,7 +101,7 @@ export default function AdminPanel() {
 
   const fetchOpportunities = async () => {
     try {
-      const res = await fetch("http://localhost:3001/opportunities");
+      const res = await fetch("${process.env.REACT_APP_API_URL}/opportunities");
       const data = await res.json();
 
       console.log("Opportunities from backend:", data);
@@ -245,7 +245,7 @@ const addFaculty = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("http://localhost:3001/faculties", {
+    const res = await fetch("${process.env.REACT_APP_API_URL}/faculties", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -274,7 +274,7 @@ const updateFaculty = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch(`http://localhost:3001/faculties/${facultyID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/faculties/${facultyID}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -303,7 +303,7 @@ const deleteFaculty = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch(`http://localhost:3001/faculties/${facultyID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/faculties/${facultyID}`, {
       method: "DELETE"
     });
 
@@ -330,7 +330,7 @@ const addMajor = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("http://localhost:3001/majors", {
+    const res = await fetch("${process.env.REACT_APP_API_URL}/majors", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -367,7 +367,7 @@ const updateMajor = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch(`http://localhost:3001/majors/${majorID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/majors/${majorID}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -404,7 +404,7 @@ const deleteMajor = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch(`http://localhost:3001/majors/${majorID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/majors/${majorID}`, {
       method: "DELETE"
     });
 
@@ -431,7 +431,7 @@ const addExpert = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("http://localhost:3001/experts", {
+    const res = await fetch("${process.env.REACT_APP_API_URL}/experts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -467,7 +467,7 @@ const addQuestion = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch("http://localhost:3001/questions", {
+    const res = await fetch("${process.env.REACT_APP_API_URL}/questions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -498,7 +498,7 @@ const updateQuestion = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch(`http://localhost:3001/questions/${questionID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/questions/${questionID}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -529,7 +529,7 @@ const deleteQuestion = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch(`http://localhost:3001/questions/${questionID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/questions/${questionID}`, {
       method: "DELETE"
     });
 
@@ -557,7 +557,7 @@ const updateExpert = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch(`http://localhost:3001/experts/${expertID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/experts/${expertID}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -591,7 +591,7 @@ const deleteExpert = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch(`http://localhost:3001/experts/${expertID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/experts/${expertID}`, {
       method: "DELETE"
     });
 
@@ -625,7 +625,7 @@ const addOption = async (e) => {
   }
 
   try {
-    const res = await fetch("http://localhost:3001/options", {
+    const res = await fetch("${process.env.REACT_APP_API_URL}/options", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -657,7 +657,7 @@ const updateOption = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch(`http://localhost:3001/options/${optionID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/options/${optionID}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -689,7 +689,7 @@ const deleteOption = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await fetch(`http://localhost:3001/options/${optionID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/options/${optionID}`, {
       method: "DELETE"
     });
 
@@ -722,7 +722,7 @@ const addSkill = async (e) => {
   }
 
   try {
-    const res = await fetch("http://localhost:3001/skills", {
+    const res = await fetch("${process.env.REACT_APP_API_URL}/skills", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -758,7 +758,7 @@ const updateSkill = async (e) => {
   }
 
   try {
-    const res = await fetch(`http://localhost:3001/skills/${skillID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/skills/${skillID}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -794,7 +794,7 @@ const deleteSkill = async (e) => {
   }
 
   try {
-    const res = await fetch(`http://localhost:3001/skills/${skillID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/skills/${skillID}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -832,7 +832,7 @@ const addOpportunity = async (e) => {
   }
 
   try {
-    const res = await fetch("http://localhost:3001/opportunities", {
+    const res = await fetch("${process.env.REACT_APP_API_URL}/opportunities", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -868,7 +868,7 @@ const updateOpportunity = async (e) => {
   }
 
   try {
-    const res = await fetch(`http://localhost:3001/opportunities/${oppoID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/opportunities/${oppoID}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -904,7 +904,7 @@ const deleteOpportunity = async (e) => {
   }
 
   try {
-    const res = await fetch(`http://localhost:3001/opportunities/${oppoID}`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/opportunities/${oppoID}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

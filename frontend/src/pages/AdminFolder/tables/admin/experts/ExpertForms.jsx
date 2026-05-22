@@ -33,7 +33,10 @@ export default function ExpertForms({
 
   if (id) {
     try {
-      const res = await fetch(`http://localhost:3001/experts/${id}`);
+      const res = await fetch(
+        `${process.env.REACT_APP_API_URL}/experts/${id}`
+      );
+
       const data = await res.json();
 
       if (data) {
@@ -42,6 +45,7 @@ export default function ExpertForms({
         setExpertEmail(data.email || '');
         setExpertFacultyID(data.facultyID || '');
       }
+
     } catch (err) {
       console.log(err);
     }
